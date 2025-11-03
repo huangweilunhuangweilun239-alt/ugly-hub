@@ -1,12 +1,12 @@
+local HttpGetFunction = game.HttpGet
 local LoadString = loadstring
-local HttpGet = game.HttpGet
 
 local function HttpGet(Url)
     if not Url or type(Url) ~= "string" then
         return ""
     end
 
-    local Success, Response = pcall(HttpGet, game, Url)
+    local Success, Response = pcall(HttpGetFunction, game, Url)
 
     return (Success and type(Response) == "string" and #Response > 0) and Response or ""
 end
@@ -25,7 +25,7 @@ local function Loader()
 
     local ScriptContent = HttpGet(ScriptUrl)
     
-    if not ScriptContent or ScriptContent == "" then 
+    if not ScriptContent then 
         return 
     end
 
