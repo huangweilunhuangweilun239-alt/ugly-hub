@@ -12,7 +12,7 @@ local function HttpGet(Url)
 end
 
 local Places = {
-    [12650999914328] = "https://api.luarmor.net/files/v3/loaders/67321ef983ac3626a0ad87d7aae33ed4.lua"
+    [126509999114328] = "https://api.luarmor.net/files/v3/loaders/67321ef983ac3626a0ad87d7aae33ed4.lua"
 }
 
 local function Loader()
